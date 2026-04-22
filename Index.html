@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esther Paola | Contadora & Asesora Financiera</title>
+<meta name="description" content="Ayudo a emprendedores a organizar sus finanzas sin enredos. Servicios de contabilidad, asesoría financiera y herramientas para que cumplas tus sueños.">
+
+<!-- Google Analytics placeholder - reemplaza G-XXXXXXXXXX con tu ID real -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --warm-white: #FDF9F4;
+    --terra: #C4724A;
+    --terra-dark: #9E5535;
+    --terra-light: #E8C4B0;
+    --sand: #D4B896;
+    --sand-light: #EEE0D0;
+    --brown: #5C3D2E;
+    --brown-light: #8B6355;
+    --text-main: #2D1F17;
+    --text-muted: #7A5C4E;
+    --text-light: #B09080;
+    --border: #E2D0C4;
+    --green-accent: #6B8F71;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+  }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--brown); text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--terra); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.85rem; font-weight: 400;
+    color: var(--text-muted); text-decoration: none;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--terra); }
+  .nav-cta {
+    background: var(--terra); color: white !important;
+    padding: 0.5rem 1.2rem; border-radius: 2px;
+  }
+  .nav-cta:hover { background: var(--terra-dark) !important; color: white !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px 2rem 0;
+    max-width: 1100px; margin: 0 auto;
+    gap: 4rem;
+  }
+  .hero-text { animation: fadeUp 0.8s ease both; }
+  .hero-eyebrow {
+    font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--terra); font-weight: 500; margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--terra);
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 500; line-height: 1.1;
+    color: var(--brown); margin-bottom: 1.5rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--terra); }
+  .hero-desc {
+    font-size: 1.05rem; color: var(--text-muted);
+    max-width: 440px; margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--terra); color: white;
+    padding: 0.85rem 2rem; border-radius: 2px;
+    text-decoration: none; font-size: 0.9rem; font-weight: 500;
+    letter-spacing: 0.03em; transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--terra-dark); transform: translateY(-1px); }
+  .btn-secondary {
+    border: 1px solid var(--brown-light); color: var(--brown);
+    padding: 0.85rem 2rem; border-radius: 2px;
+    text-decoration: none; font-size: 0.9rem; font-weight: 400;
+    letter-spacing: 0.03em; transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-secondary:hover { border-color: var(--terra); color: var(--terra); }
+
+  .hero-visual {
+    position: relative;
+    animation: fadeUp 0.8s ease 0.2s both;
+  }
+  .hero-card-main {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card-main::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4px; background: linear-gradient(90deg, var(--terra), var(--sand));
+  }
+  .avatar-circle {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: var(--sand-light);
+    border: 3px solid var(--terra-light);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; font-weight: 600; color: var(--terra-dark);
+    margin-bottom: 1.2rem;
+  }
+  .hero-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 600; color: var(--brown);
+    margin-bottom: 0.2rem;
+  }
+  .hero-card-title { font-size: 0.85rem; color: var(--terra); font-weight: 500; margin-bottom: 1.5rem; }
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem; margin-top: 1.5rem;
+    padding-top: 1.5rem; border-top: 1px solid var(--border);
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 600; color: var(--terra);
+    line-height: 1;
+  }
+  .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+  .floating-badge {
+    position: absolute; top: -1rem; right: -1rem;
+    background: var(--green-accent); color: white;
+    padding: 0.6rem 1rem; border-radius: 2px;
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+
+  /* STRIP */
+  .strip {
+    background: var(--brown); padding: 1.2rem 2rem;
+    overflow: hidden;
+  }
+  .strip-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; gap: 3rem; align-items: center; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .strip-item {
+    color: var(--sand-light); font-size: 0.8rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .strip-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--terra); }
+
+  /* SECTION base */
+  section { padding: 6rem 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--terra); font-weight: 500; margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .section-label::before { content: ''; width: 24px; height: 1px; background: var(--terra); display: block; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500; color: var(--brown); margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+  .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 520px; line-height: 1.8; }
+
+  /* SOBRE MÍ */
+  #sobre-mi { background: var(--warm-white); }
+  .sobre-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr;
+    gap: 5rem; align-items: center; margin-top: 3rem;
+  }
+  .sobre-img-wrap {
+    position: relative;
+  }
+  .sobre-img-placeholder {
+    width: 100%; aspect-ratio: 4/5;
+    background: var(--sand-light);
+    border-radius: 4px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1rem; color: var(--text-muted);
+    font-size: 0.85rem;
+    border: 2px dashed var(--border);
+  }
+  .sobre-img-placeholder .img-icon {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--terra-light);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; color: var(--terra-dark); font-weight: 600;
+  }
+  .sobre-accent {
+    position: absolute; bottom: -1.5rem; right: -1.5rem;
+    background: var(--terra); color: white;
+    padding: 1.2rem 1.5rem; border-radius: 4px;
+    text-align: center;
+  }
+  .sobre-accent-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem; font-weight: 600; line-height: 1;
+  }
+  .sobre-accent-text { font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.9; }
+
+  .sobre-content { padding-left: 1rem; }
+  .sobre-content p { color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.85; }
+  .sobre-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem;
+  }
+  .tag {
+    background: var(--sand-light); color: var(--brown);
+    padding: 0.35rem 0.9rem; border-radius: 2px;
+    font-size: 0.8rem; font-weight: 400;
+  }
+  .tag-faith { background: #EAF3E8; color: #3B6D11; }
+
+  /* SERVICIOS */
+  #servicios { background: var(--cream); }
+  .servicios-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .servicio-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: all 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .servicio-card:hover {
+    border-color: var(--terra-light);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(196, 114, 74, 0.12);
+  }
+  .servicio-card.featured {
+    border-color: var(--terra);
+    border-width: 2px;
+  }
+  .featured-badge {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    background: var(--terra); color: white;
+    font-size: 0.7rem; padding: 0.25rem 0.6rem;
+    border-radius: 2px; letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .servicio-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 400; color: var(--terra-light);
+    line-height: 1; margin-bottom: 1rem;
+  }
+  .servicio-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600; color: var(--brown);
+    margin-bottom: 0.6rem;
+  }
+  .servicio-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+  .servicio-list { list-style: none; margin-bottom: 1.5rem; }
+  .servicio-list li {
+    font-size: 0.85rem; color: var(--text-muted);
+    padding: 0.3rem 0; display: flex; align-items: center; gap: 0.5rem;
+  }
+  .servicio-list li::before {
+    content: ''; display: block;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--terra); flex-shrink: 0;
+  }
+  .servicio-link {
+    font-size: 0.85rem; font-weight: 500; color: var(--terra);
+    text-decoration: none; letter-spacing: 0.03em;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .servicio-link:hover { color: var(--terra-dark); }
+  .servicio-link::after { content: '→'; }
+
+  /* PRODUCTOS */
+  #productos { background: var(--brown); }
+  #productos .section-label { color: var(--sand); }
+  #productos .section-label::before { background: var(--sand); }
+  #productos .section-title { color: var(--sand-light); }
+  #productos .section-sub { color: var(--text-light); }
+
+  .productos-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .producto-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px; padding: 1.8rem;
+    transition: all 0.25s;
+  }
+  .producto-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--sand);
+  }
+  .producto-card.gratis { border-color: var(--green-accent); }
+  .producto-tipo {
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--sand); margin-bottom: 0.8rem;
+  }
+  .producto-tipo.free { color: #9BD4A0; }
+  .producto-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 500; color: white;
+    margin-bottom: 0.6rem; line-height: 1.2;
+  }
+  .producto-desc { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem; }
+  .producto-precio {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; font-weight: 600; color: var(--terra-light);
+    margin-bottom: 1rem;
+  }
+  .producto-precio span { font-size: 1rem; font-weight: 400; color: var(--text-light); }
+  .producto-cta {
+    display: block; text-align: center;
+    background: var(--terra); color: white;
+    padding: 0.7rem; border-radius: 2px;
+    text-decoration: none; font-size: 0.85rem; font-weight: 500;
+    transition: background 0.2s;
+  }
+  .producto-cta:hover { background: var(--terra-dark); }
+  .producto-cta.gratis-btn {
+    background: transparent; border: 1px solid var(--green-accent);
+    color: #9BD4A0;
+  }
+  .producto-cta.gratis-btn:hover { background: var(--green-accent); color: white; }
+
+  /* TESTIMONIOS */
+  #testimonios { background: var(--sand-light); }
+  .test-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .test-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 4px; padding: 2rem;
+  }
+  .test-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; color: var(--terra-light); line-height: 0.8;
+    margin-bottom: 0.5rem;
+  }
+  .test-text { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; }
+  .test-author { font-size: 0.85rem; font-weight: 500; color: var(--brown); }
+  .test-role { font-size: 0.78rem; color: var(--text-light); }
+
+  /* BLOG / RECURSOS */
+  #recursos { background: var(--cream); }
+  .recursos-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .recurso-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 4px; overflow: hidden;
+    transition: transform 0.25s;
+    text-decoration: none; color: inherit;
+    display: block;
+  }
+  .recurso-card:hover { transform: translateY(-3px); }
+  .recurso-img {
+    height: 140px;
+    background: var(--sand-light);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-light); font-size: 0.8rem;
+  }
+  .recurso-body { padding: 1.5rem; }
+  .recurso-cat {
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--terra); font-weight: 500; margin-bottom: 0.6rem;
+  }
+  .recurso-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 600; color: var(--brown);
+    margin-bottom: 0.5rem; line-height: 1.3;
+  }
+  .recurso-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* CONTACTO / CTA */
+  #contacto {
+    background: var(--terra);
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  #contacto .section-label { color: rgba(255,255,255,0.7); justify-content: center; }
+  #contacto .section-label::before { background: rgba(255,255,255,0.7); }
+  #contacto .section-title { color: white; text-align: center; }
+  #contacto .section-sub { color: rgba(255,255,255,0.8); margin: 0 auto 2.5rem; text-align: center; }
+  .contacto-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-white {
+    background: white; color: var(--terra);
+    padding: 0.9rem 2.2rem; border-radius: 2px;
+    text-decoration: none; font-weight: 500; font-size: 0.9rem;
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-white:hover { background: var(--cream); transform: translateY(-1px); }
+  .btn-outline-white {
+    border: 1.5px solid rgba(255,255,255,0.6); color: white;
+    padding: 0.9rem 2.2rem; border-radius: 2px;
+    text-decoration: none; font-size: 0.9rem;
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+  /* FOOTER */
+  footer {
+    background: var(--text-main); padding: 3rem 2rem;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; color: var(--sand-light); font-weight: 600;
+  }
+  .footer-logo span { color: var(--terra-light); }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a {
+    font-size: 0.8rem; color: var(--text-light);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--terra-light); }
+  .footer-copy { font-size: 0.78rem; color: var(--text-light); }
+  .footer-verse {
+    width: 100%; text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.95rem;
+    color: rgba(212, 184, 150, 0.5); margin-top: 1rem;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; padding-top: 100px; gap: 2rem; }
+    .hero-visual { order: -1; }
+    .floating-badge { display: none; }
+    .sobre-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .sobre-content { padding-left: 0; }
+    .sobre-accent { bottom: -1rem; right: 0; }
+    .nav-links { display: none; }
+    .hero-btns { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#inicio">By<span>Esther</span>Paola</a>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#recursos">Blog</a></li>
+      <li><a href="#contacto" class="nav-cta">Agendar sesión</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" style="padding-top:0; padding-bottom:0;">
+  <div class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Contadora & Asesora Financiera</p>
+      <h1>Tus finanzas<br>claras, <em>sin enredos</em></h1>
+      <p class="hero-desc">Ayudo a emprendedores y pequeñas empresas a organizar su dinero, tomar decisiones inteligentes y construir el camino hacia sus sueños — con herramientas reales y acompañamiento cercano.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn-primary">Quiero una sesión de claridad</a>
+        <a href="#productos" class="btn-secondary">Ver mis recursos</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-main">
+        <div class="floating-badge">Disponible ahora</div>
+        <div class="avatar-circle">EP</div>
+        <p class="hero-card-name">Esther Paola</p>
+        <p class="hero-card-title">Contadora Pública · NIIF · Finanzas para emprendedores</p>
+        <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.7;">
+          Especialista en finanzas empresariales, valoración de contratos bajo NIIF 16, y gestión contable para negocios que quieren crecer con orden.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">+5</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">NIIF</div>
+            <div class="stat-label">Normativa internacional</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Productos digitales</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Orientación a tus metas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-item"><span class="strip-dot"></span>Gestión Contable</div>
+    <div class="strip-item"><span class="strip-dot"></span>NIIF 16</div>
+    <div class="strip-item"><span class="strip-dot"></span>Asesoría ICETEX</div>
+    <div class="strip-item"><span class="strip-dot"></span>Finanzas personales</div>
+    <div class="strip-item"><span class="strip-dot"></span>Tablas de amortización</div>
+    <div class="strip-item"><span class="strip-dot"></span>Presupuestos</div>
+  </div>
+</div>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
+  <div class="section-inner">
+    <div class="sobre-grid">
+      <div class="sobre-img-wrap">
+        <div class="sobre-img-placeholder">
+          <div class="img-icon">EP</div>
+          <span>Agrega tu foto aquí</span>
+          <span style="font-size:0.75rem; color:var(--text-light);">(reemplaza este bloque con una etiqueta &lt;img&gt;)</span>
+        </div>
+        <div class="sobre-accent">
+          <div class="sobre-accent-num">+5</div>
+          <div class="sobre-accent-text">Años de experiencia</div>
+        </div>
+      </div>
+      <div class="sobre-content">
+        <p class="section-label">Sobre mí</p>
+        <h2 class="section-title">Una contadora<br>que entiende<br><em style="font-style:italic; color:var(--terra);">tu negocio</em></h2>
+        <p>Soy Esther Paola, Contadora Pública con experiencia en gestión contable, finanzas corporativas, valoración de contratos bajo NIIF 16 y acompañamiento a emprendedores. He trabajado como asistente jurídica y financiera, y ayudado a jóvenes a navegar sus procesos de crédito educativo con el ICETEX.</p>
+        <p>Mi misión es sencilla: que el dinero deje de ser un dolor de cabeza. Creo que cuando organizás tus finanzas con claridad, tus sueños se vuelven planes reales.</p>
+        <p style="color:var(--green-accent); font-style:italic;">"Todo lo puedo en Cristo que me fortalece." — Filipenses 4:13</p>
+        <div class="sobre-tags">
+          <span class="tag">Contadora Pública</span>
+          <span class="tag">NIIF 16</span>
+          <span class="tag">Finanzas corporativas</span>
+          <span class="tag">Cobranza</span>
+          <span class="tag">ICETEX</span>
+          <span class="tag">Presupuestos de viaje</span>
+          <span class="tag tag-faith">Cristiana</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-inner">
+    <p class="section-label">Servicios</p>
+    <h2 class="section-title">¿En qué te puedo<br>acompañar?</h2>
+    <p class="section-sub">Servicios profesionales adaptados a emprendedores, independientes y pequeñas empresas en Colombia.</p>
+    <div class="servicios-grid">
+
+      <div class="servicio-card featured">
+        <span class="featured-badge">Más solicitado</span>
+        <div class="servicio-num">01</div>
+        <h3 class="servicio-title">Sesión de Claridad Financiera</h3>
+        <p class="servicio-desc">Una sesión 1:1 para diagnosticar la salud financiera de tu negocio y definir un plan de acción claro.</p>
+        <ul class="servicio-list">
+          <li>Análisis de tu situación actual</li>
+          <li>Identificación de fugas de dinero</li>
+          <li>Plan de acción personalizado</li>
+          <li>Grabación de la sesión incluida</li>
+        </ul>
+        <a href="#contacto" class="servicio-link">Agendar mi sesión</a>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-num">02</div>
+        <h3 class="servicio-title">Gestión Contable</h3>
+        <p class="servicio-desc">Manejo contable mensual para que te enfoques en crecer tu negocio, no en los números.</p>
+        <ul class="servicio-list">
+          <li>Registro de ingresos y gastos</li>
+          <li>Conciliaciones bancarias</li>
+          <li>Estados financieros mensuales</li>
+          <li>Informes para toma de decisiones</li>
+        </ul>
+        <a href="#contacto" class="servicio-link">Solicitar información</a>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-num">03</div>
+        <h3 class="servicio-title">Asesoría NIIF 16</h3>
+        <p class="servicio-desc">Valoración y gestión de contratos de arrendamiento bajo norma NIIF 16 para tu empresa.</p>
+        <ul class="servicio-list">
+          <li>Identificación de contratos aplicables</li>
+          <li>Cálculo de activos por derecho de uso</li>
+          <li>Tablas de amortización</li>
+          <li>Revelaciones contables</li>
+        </ul>
+        <a href="#contacto" class="servicio-link">Cotizar asesoría</a>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-num">04</div>
+        <h3 class="servicio-title">Asesoría ICETEX</h3>
+        <p class="servicio-desc">Acompañamiento paso a paso para solicitar tu crédito educativo con el ICETEX sin complicaciones.</p>
+        <ul class="servicio-list">
+          <li>Revisión de documentos</li>
+          <li>Acompañamiento en el proceso</li>
+          <li>Simulación de cuotas</li>
+          <li>Seguimiento hasta el desembolso</li>
+        </ul>
+        <a href="#contacto" class="servicio-link">Pedir información</a>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-num">05</div>
+        <h3 class="servicio-title">Presupuesto de Viaje</h3>
+        <p class="servicio-desc">Planificación financiera completa para que viajes sin deudas y sin sorpresas desagradables.</p>
+        <ul class="servicio-list">
+          <li>Presupuesto personalizado por destino</li>
+          <li>Estrategia de ahorro previo</li>
+          <li>Herramientas de seguimiento</li>
+          <li>Recomendaciones prácticas</li>
+        </ul>
+        <a href="#contacto" class="servicio-link">Planificar mi viaje</a>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-num">06</div>
+        <h3 class="servicio-title">Finanzas Personales</h3>
+        <p class="servicio-desc">Organiza tus ingresos, deudas y metas de ahorro con un plan que realmente puedas cumplir.</p>
+        <ul class="servicio-list">
+          <li>Diagnóstico financiero personal</li>
+          <li>Plan de deudas y ahorro</li>
+          <li>Presupuesto mensual</li>
+          <li>Seguimiento a 3 meses</li>
+        </ul>
+        <a href="#contacto" class="servicio-link">Empezar ahora</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos">
+  <div class="section-inner">
+    <p class="section-label">Recursos digitales</p>
+    <h2 class="section-title">Herramientas para<br>cumplir tus sueños</h2>
+    <p class="section-sub">Plantillas, guías y sesiones diseñadas para que tomes el control de tu dinero desde hoy.</p>
+    <div class="productos-grid">
+
+      <div class="producto-card">
+        <p class="producto-tipo">Plantilla digital</p>
+        <h3 class="producto-title">Finanzas para Emprendedores</h3>
+        <p class="producto-desc">Sistema completo en Excel/Sheets para controlar ingresos, gastos e impuestos de tu negocio.</p>
+        <p class="producto-precio">Desde $29.000 <span>COP</span></p>
+        <a href="https://go.hotmart.com/byestherpaola" target="_blank" class="producto-cta">Obtener plantilla</a>
+      </div>
+
+      <div class="producto-card featured" style="border-color: var(--sand);">
+        <p class="producto-tipo">Sesión 1:1</p>
+        <h3 class="producto-title">Sesión de Claridad Financiera</h3>
+        <p class="producto-desc">60 minutos contigo para diagnosticar tu situación y crear un plan de acción claro y personalizado.</p>
+        <p class="producto-precio">Consultar <span>precio</span></p>
+        <a href="#contacto" class="producto-cta">Agendar sesión</a>
+      </div>
+
+      <div class="producto-card">
+        <p class="producto-tipo">Diagnóstico</p>
+        <h3 class="producto-title">Diagnóstico Financiero Simple</h3>
+        <p class="producto-desc">Descubre en minutos cuál es la salud financiera real de tu negocio y dónde están las oportunidades.</p>
+        <p class="producto-precio">Desde $15.000 <span>COP</span></p>
+        <a href="https://go.hotmart.com/byestherpaola" target="_blank" class="producto-cta">Obtener diagnóstico</a>
+      </div>
+
+      <div class="producto-card gratis">
+        <p class="producto-tipo free">Gratis</p>
+        <h3 class="producto-title">Plantillas de Gestión de Negocio</h3>
+        <p class="producto-desc">Pack de plantillas gratuitas para que empieces a organizar tu negocio sin gastar un peso.</p>
+        <p class="producto-precio" style="color:#9BD4A0;">GRATIS</p>
+        <a href="https://go.hotmart.com/byestherpaola" target="_blank" class="producto-cta gratis-btn">Descargar gratis</a>
+      </div>
+
+      <div class="producto-card gratis">
+        <p class="producto-tipo free">Gratis</p>
+        <h3 class="producto-title">Guía para organizar tus finanzas</h3>
+        <p class="producto-desc">La guía simple para empezar a organizar tus finanzas personales desde cero, paso a paso.</p>
+        <p class="producto-precio" style="color:#9BD4A0;">GRATIS</p>
+        <a href="https://go.hotmart.com/byestherpaola" target="_blank" class="producto-cta gratis-btn">Descargar guía</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+  <div class="section-inner">
+    <p class="section-label">Testimonios</p>
+    <h2 class="section-title">Lo que dicen<br>quienes confían en mí</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-quote">"</div>
+        <p class="test-text">Esther me ayudó a entender por qué mi negocio vendía pero nunca sobraba dinero. En una sesión tuve más claridad que en años. ¡Totalmente recomendada!</p>
+        <p class="test-author">María C.</p>
+        <p class="test-role">Emprendedora · Bogotá</p>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"</div>
+        <p class="test-text">Gracias a su acompañamiento logré mi crédito ICETEX sin estrés. Estuvo pendiente en cada paso del proceso. Una persona muy profesional y cercana.</p>
+        <p class="test-author">Carlos R.</p>
+        <p class="test-role">Estudiante universitario</p>
+      </div>
+      <div class="test-card">
+        <div class="test-quote">"</div>
+        <p class="test-text">Sus plantillas me cambiaron la vida. Ahora sé exactamente en qué gasto, cuánto ahorro y cómo va mi negocio cada mes. Sencillas y muy completas.</p>
+        <p class="test-author">Daniela M.</p>
+        <p class="test-role">Diseñadora freelance</p>
+      </div>
+    </div>
+    <p style="font-size:0.8rem; color:var(--text-light); margin-top:1.5rem; text-align:center;">
+      * Puedes reemplazar estos testimonios con los reales de tus clientes
+    </p>
+  </div>
+</section>
+
+<!-- RECURSOS / BLOG -->
+<section id="recursos">
+  <div class="section-inner">
+    <p class="section-label">Blog & Recursos</p>
+    <h2 class="section-title">Aprende sobre<br>tus finanzas</h2>
+    <p class="section-sub">Artículos prácticos para que tomes mejores decisiones con tu dinero.</p>
+    <div class="recursos-grid">
+      <a href="#" class="recurso-card">
+        <div class="recurso-img">📊 Agrega imagen del artículo</div>
+        <div class="recurso-body">
+          <p class="recurso-cat">Finanzas para emprendedores</p>
+          <h3 class="recurso-title">¿Por qué vendo mucho pero nunca me sobra dinero?</h3>
+          <p class="recurso-desc">Descubre las 5 razones más comunes por las que los emprendedores pierden dinero sin darse cuenta.</p>
+        </div>
+      </a>
+      <a href="#" class="recurso-card">
+        <div class="recurso-img">✈️ Agrega imagen del artículo</div>
+        <div class="recurso-body">
+          <p class="recurso-cat">Viajes con presupuesto</p>
+          <h3 class="recurso-title">Cómo organizar tu primer viaje internacional con presupuesto limitado</h3>
+          <p class="recurso-desc">Una guía paso a paso para planear tu viaje sin deudas y sin sacrificar la experiencia.</p>
+        </div>
+      </a>
+      <a href="#" class="recurso-card">
+        <div class="recurso-img">💡 Agrega imagen del artículo</div>
+        <div class="recurso-body">
+          <p class="recurso-cat">Créditos & ICETEX</p>
+          <h3 class="recurso-title">Todo lo que nadie te dice sobre el crédito ICETEX</h3>
+          <p class="recurso-desc">Requisitos reales, errores comunes y cómo calcular cuánto vas a pagar mes a mes.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA CONTACTO -->
+<section id="contacto">
+  <div class="section-inner">
+    <p class="section-label">¿Hablamos?</p>
+    <h2 class="section-title">Da el primer paso<br>hacia tu libertad financiera</h2>
+    <p class="section-sub">Una conversación puede cambiar el rumbo de tu negocio. Agenda tu sesión hoy — sin compromisos.</p>
+    <div class="contacto-btns">
+      <a href="https://wa.me/57TUNUMERO?text=Hola%20Esther%20Paola%2C%20quiero%20una%20sesi%C3%B3n%20de%20claridad%20financiera" target="_blank" class="btn-white">Escribir por WhatsApp</a>
+      <a href="mailto:tu@email.com" class="btn-outline-white">Enviar correo</a>
+      <a href="https://hotmart.com/byestherpaola" target="_blank" class="btn-outline-white">Ver todos los productos</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">By<span>Esther</span>Paola</div>
+    <div class="footer-links">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://tiktok.com/@byestherpaola" target="_blank">TikTok</a>
+    </div>
+    <p class="footer-copy">© 2026 ByEstherPaola · Colombia</p>
+    <p class="footer-verse">"Porque yo sé los planes que tengo para ustedes." — Jeremías 29:11</p>
+  </div>
+</footer>
+
+</body>
+</html>
